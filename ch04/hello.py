@@ -14,7 +14,6 @@ def _numerical_gradient_no_batch(f, x):
     
     for idx in range(x.size):
         tmp_val = x[idx]
-        print(tmp_val)
         x[idx] = float(tmp_val) + h
         fxh1 = f(x) # f(x+h)
         
@@ -55,6 +54,7 @@ def tangent_line(f, x):
 if __name__ == '__main__':
     x0 = np.arange(-2, 2.5, 0.25)
     x1 = np.arange(-2, 2.5, 0.25)
+    print(x1)
     X, Y = np.meshgrid(x0, x1)
     
     X = X.flatten()
