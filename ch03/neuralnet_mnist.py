@@ -38,6 +38,7 @@ if __name__ == '__main__':
     x, t = get_data()
     network = init_network()
     accuracy_cnt = 0
+    print("length : {}".format(len(x)))
     for i in range(len(x)):
         y = predict(network, x[i])
         p = np.argmax(y)
